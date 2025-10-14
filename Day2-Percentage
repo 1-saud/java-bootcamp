@@ -1,0 +1,17 @@
+
+
+public class Percentage {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter obtained marks: ");
+        double obtained = input.nextDouble();
+
+        System.out.print("Enter total marks: ");
+        double total = input.nextDouble();
+
+        double percentage = (obtained / total) * 100;
+
+        System.out.println("Percentage = " + percentage + "%");
+    }
+}
