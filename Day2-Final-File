@@ -1,0 +1,145 @@
+import java.util.Scanner;
+
+public class BMI {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter weight (kg): ");
+        double weight = input.nextDouble();
+
+        System.out.print("Enter height (m): ");
+        double height = input.nextDouble();
+
+        double bmi = weight / (height * height);
+
+        System.out.println("BMI = " + bmi);
+    }
+}
+
+public class Percentage {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter obtained marks: ");
+        double obtained = input.nextDouble();
+
+        System.out.print("Enter total marks: ");
+        double total = input.nextDouble();
+
+        double percentage = (obtained / total) * 100;
+
+        System.out.println("Percentage = " + percentage + "%");
+    }
+}
+
+
+public class CurrencyConverter {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter amount in USD: ");
+        double usd = input.nextDouble();
+
+        System.out.print("Enter exchange rate (USD to EUR): ");
+        double rate = input.nextDouble();
+
+        double eur = usd * rate;
+
+        System.out.println("Amount in EUR = " + eur);
+    }
+}
+
+
+public class StringReverse {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String text = input.nextLine();
+
+        int length = text.length();
+
+        StringBuilder reversed = new StringBuilder(text);
+        reversed.reverse();
+
+        System.out.println("Length of the string: " + length);
+        System.out.println("Reversed string: " + reversed);
+    }
+}
+
+
+public class SubstringExample {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a sentence: ");
+        String sentence = input.nextLine();
+
+        System.out.print("Enter start index: ");
+        int start = input.nextInt();
+
+        System.out.print("Enter end index: ");
+        int end = input.nextInt();
+
+        String part = sentence.substring(start, end);
+
+        System.out.println("Extracted part: " + part);
+    }
+}
+
+public class KeywordCheck {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a sentence: ");
+        String sentence = input.nextLine();
+
+        System.out.print("Enter a keyword: ");
+        String keyword = input.nextLine();
+
+        if (sentence.contains(keyword)) {
+            System.out.println("Keyword \"" + keyword + "\" is present in the sentence.");
+        } else {
+            System.out.println("Keyword \"" + keyword + "\" is not present in the sentence.");
+        }
+    }
+}
+
+public class WordReplace {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a sentence: ");
+        String sentence = input.nextLine();
+
+        System.out.print("Enter word to replace: ");
+        String oldWord = input.nextLine();
+
+        System.out.print("Enter replacement word: ");
+        String newWord = input.nextLine();
+
+        String newSentence = sentence.replace(oldWord, newWord);
+
+        System.out.println("Modified sentence: " + newSentence);
+    }
+}
+
+public class CompareStrings {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter first string: ");
+        String str1 = input.nextLine();
+
+        System.out.print("Enter second string: ");
+        String str2 = input.nextLine();
+
+        if (str1.equalsIgnoreCase(str2)) {
+            System.out.println("Strings are equal (ignoring case).");
+        } else {
+            System.out.println("Strings are not equal.");
+        }
+    }
+}
+
+
