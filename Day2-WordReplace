@@ -1,0 +1,21 @@
+
+
+public class WordReplace {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a sentence: ");
+        String sentence = input.nextLine();
+
+        System.out.print("Enter word to replace: ");
+        String oldWord = input.nextLine();
+
+        System.out.print("Enter replacement word: ");
+        String newWord = input.nextLine();
+
+        String newSentence = sentence.replace(oldWord, newWord);
+
+        System.out.println("Modified sentence: " + newSentence);
+    }
+}
+
