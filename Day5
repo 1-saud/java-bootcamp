@@ -1,0 +1,307 @@
+import java.util.Scanner;
+
+public class Day5 {
+
+    public static void main(String[] args) {
+
+
+       /* Q1
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the Firest number: ");
+            int number1 = input.nextInt();
+                    System.out.print("Enter the Second number: ");
+            int number2 = input.nextInt();
+        // multiply subtract divide
+            double multiply = number1 * number2;
+            double subtract = number1 - number2;
+            double divide = number1 / number2;
+        System.out.println(" = " + multiply );
+        System.out.println(" = " + subtract );
+        System.out.println(" = " + divide );
+}
+}
+        // Q2
+        System.out.println("Enter your number:");
+        Scanner input = new Scanner(System.in);
+        int number = input.nextInt();
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(number + " x " + i + " = " + (number * i));
+        }
+}
+        input.close();
+
+
+        // Q3
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter radius: ");
+        double radius = input.nextDouble();
+        double circleArea = Math.PI * radius * radius;
+        System.out.println("Area of Circle = " + circleArea);
+    }
+}
+
+        // Q4
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the count of numbers: ");
+        int count = input.nextInt();
+
+        int sum = 0;
+
+        for (int i = 1; i <= count; i++) {
+            System.out.print("Enter an integer: ");
+            int num = input.nextInt();
+            sum += num;  // نجمع الأرقام
+        }
+
+        double average = (double) sum / count; // نحسب المتوسط
+
+        System.out.println("The average is: " + average);
+
+        input.close();
+    }
+}
+
+
+        // Q5
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input the first number: ");
+        int num1 = input.nextInt();
+
+        System.out.print("Input the second number: ");
+        int num2 = input.nextInt();
+
+        System.out.print("Input the third number: ");
+        int num3 = input.nextInt();
+
+        int sum = num1 + num2;  // جمع أول رقمين
+
+        boolean result = (sum == num3); // التحقق إذا المجموع يساوي الثالث
+
+        System.out.println("The result is: " + result);
+
+        input.close();
+    }
+}
+
+
+        // Q6
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String text = input.nextLine();
+
+        String reversed = "";
+
+        for (int i = text.length() - 1; i >= 0; i--) {
+            reversed += text.charAt(i);
+        }
+
+        System.out.println("Reversed string: " + reversed);
+        input.close();
+    }
+}
+
+        // Q7
+        Scanner input = new Scanner (System.in);
+        System.out.print("enter the number");
+        int number = input.nextInt();
+        if ((number % 2) == 0) {
+            System.out.print("Your number is even" );
+            // even
+        } else {
+            // odd
+            System.out.print("Your number is odd" );
+        }
+
+
+
+        // Q8
+        double fahrenheit = 0.0;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the temperature in Fahrenheit: ");
+        double celsius = input.nextByte();
+        // formula for conversion
+        fahrenheit = (celsius * 1.8) + 32;
+        System.out.println(" value of temperature in fahrenheit:" + fahrenheit);
+
+        }
+        }
+
+
+        // Q9
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input a string: ");
+        String text = input.nextLine();
+
+        System.out.print("Input a number: ");
+        int index = input.nextInt();
+
+        if (index >= 0 && index < text.length()) {
+            System.out.println("Character at index " + index + " is: " + text.charAt(index));
+        } else {
+            System.out.println("Invalid index!");
+        }
+
+        input.close();
+    }
+}
+
+
+        // Q10
+
+        System.out.print("Enter Height: ");
+        Scanner input = new Scanner (System.in);
+        double length = input.nextDouble();
+        System.out.print("Enter width: ");
+        double width = input.nextDouble();
+        double rectangleArea = length * width;
+        System.out.println("Area of Rectangle = " + rectangleArea);
+
+    }
+}
+
+
+
+        //Q11
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the value of the First number: : ");
+        int firstNumber = input.nextInt();
+        System.out.print("Enter the value of the Second number: : ");
+        int secondNumber = input.nextInt();
+        // comparison operators
+        System.out.println("a > b: " + (firstNumber > secondNumber));
+        System.out.println("a < c: " + (firstNumber < secondNumber));
+        System.out.println("a >= d: " + (firstNumber >= secondNumber));
+    }
+}
+        */
+
+
+/*
+        //Q12
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input seconds: ");
+        int totalSeconds = input.nextInt();
+        int hours = totalSeconds / 3600;
+        int remainingSeconds = totalSeconds % 3600;
+        int minutes = remainingSeconds / 60;
+        int seconds = remainingSeconds % 60;
+        System.out.printf("%02d:%02d:%02d%n", hours, minutes, seconds);
+            }
+        }
+
+
+*/
+        //Q13
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter the First Number");
+        int a = input.nextInt();
+        System.out.println("enter the Second Number");
+        int b = input.nextInt();
+        System.out.println("enter the 3rd num");
+        int c = input.nextInt();
+        System.out.println("enter the 4th number");
+        int d = input.nextInt();
+        System.out.println(a+b+c+d);
+        if(a == b && b == c && c == d){
+            System.out.println("number is equal");
+        }
+        else{ System.out.println("number is not equal");
+        }
+
+    }
+}
+/*
+        Q14
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
+
+        if (number > 0) {
+            System.out.println("Number is positive");
+        } else if (number < 0) {
+            System.out.println("Number is negative");
+        } else {
+            System.out.println("Number is zero");
+        }
+
+        input.close();
+    }
+}
+
+
+        Q15
+
+        Scanner input = new Scanner(System.in);
+
+        int positive = 0;
+        int negative = 0;
+        int zeros = 0;
+
+        System.out.println("Enter numbers (enter -1 to stop):");
+
+        while (true) { // حلقة تستمر إلى أن يدخل المستخدم -1
+            int num = input.nextInt();
+
+            if (num == -1) {
+                break; // نخرج من الحلقة
+            } else if (num > 0) {
+                positive++;
+            } else if (num < 0) {
+                negative++;
+            } else {
+                zeros++;
+            }
+        }
+
+        System.out.println("Count of positive numbers: " + positive);
+        System.out.println("Count of negative numbers: " + negative);
+        System.out.println("Count of zeros: " + zeros);
+
+        input.close();
+    }
+}
+
+
+         //Q16
+         Scanner input = new Scanner(System.in);
+
+         System.out.print("Enter an integer: ");
+         int number = input.nextInt();
+         int reversed = 0;
+             while (number != 0) {
+                    int digit = number % 10;        // نأخذ آخر رقم
+                    reversed = reversed * 10 + digit; // نضيفه إلى الرقم المعكوس
+                    number /= 10;                    // نحذف آخر رقم من العدد الأصلي
+                }
+
+          System.out.println("Reversed Int is: " + reversed);
+           input.close();
+            }
+        }
+
+
+        //Q18
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter String: ");
+        String text = input.nextLine().toLowerCase();
+
+        int count = 0;
+
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) == 'a') { count++; }
+        }
+
+        System.out.println("Number of a's: " + count);
+            }
+        }
+
+
+
+
+        */
+
+
+
+
