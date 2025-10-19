@@ -1,0 +1,153 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Day6 {
+    public static void main(String[] args) {
+
+    /*    Q1
+    Scanner input = new Scanner(System.in);
+    System.out.println("كم عدد العناصر في المصفوفة؟ ");
+    int size = input.nextInt();
+
+        if (size < 2) {
+        System.out.println("عدد العناصر يجب أن يكون 2 أو أكثر.");
+        return;
+    }
+
+    int[] array = new int[size];
+
+        System.out.println("ادخل الأرقام:");
+        for (int i = 0; i < size; i++) {
+        array[i] = input.nextInt();
+    }
+
+    boolean same = array[0] == array[array.length - 1];
+        System.out.println("هل أول وآخر عنصر متساويان؟ " + same);
+
+        input.close();
+}
+*/
+
+ /*       // Q2
+ Scanner input = new Scanner(System.in);
+
+        System.out.print("كم عدد العناصر في المصفوفة؟ ");
+        int n = input.nextInt();
+
+        int[] nums = new int[n];
+        double sum = 0;
+
+        System.out.println("ادخل الأرقام:");
+        for (int i = 0; i < n; i++) {
+            nums[i] = input.nextInt();
+            sum += nums[i];
+        }
+
+        double average = sum / n;
+        System.out.println("المتوسط هو: " + average);
+        System.out.print("الأرقام الأكبر من المتوسط هي: ");
+
+        for (int num : nums) {
+            if (num > average) {
+                System.out.print(num + " ");
+            }
+        }
+
+        input.close();
+    }
+}
+
+
+        //Q3
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("كم عدد العناصر في المصفوفة؟ ");
+        int n = input.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.println("ادخل الأرقام:");
+        for (int i = 0; i < n; i++) {
+        arr[i] = input.nextInt();}
+
+        int first = arr[0];
+        int last = arr[arr.length - 1];
+
+        int max = Math.max(first, last);
+        System.out.println("القيمة الأكبر بين أول وآخر عنصر هي: " + max);
+        input.close();
+    }
+}
+
+        */
+        //Q4
+//        Scanner input = new Scanner(System.in);
+//
+//        System.out.print("كم عدد العناصر في المصفوفة؟ ");
+//        int n = input.nextInt();
+//        int[] arr = new int[n];
+//
+//        System.out.println("ادخل الأرقام:");
+//        for (int i = 0; i < n; i++) {
+//            arr[i] = input.nextInt();
+//        }
+//
+//        int temp = arr[0];
+//        arr[0] = arr[arr.length - 1];
+//        arr[arr.length - 1] = temp;
+//
+//        System.out.println("المصفوفة بعد التبديل: " + Arrays.toString(arr));
+//        input.close();
+//    }
+//}
+
+
+        //Q5
+//        int[] numbers = {2, 3, 40, 1, 5, 9, 4, 10, 7};
+//
+//        System.out.print("Original Array: ");
+//        for (int n : numbers) {
+//            System.out.print(n + " ");
+//        }
+//
+//        System.out.println("\nNew Array:");
+//        for (int n : numbers) {
+//            if (n % 2 != 0) {
+//                System.out.print(n + " ");
+//            }
+//        }
+//        for (int n : numbers) {
+//            if (n % 2 == 0) {
+//                System.out.print(n + " ");
+//            }
+//        }
+//    }
+//}
+//      Q6
+        int[] a = {2, 3, 6, 6, 4};
+        int[] b = {2, 3, 6, 6, 4};
+
+        boolean equal = true;
+
+        if (a.length != b.length) {
+            equal = false;
+        } else {
+            for (int i = 0; i < a.length; i++) {
+                if (a[i] != b[i]) {
+                    equal = false;
+                    break;
+                }
+            }
+        }
+
+        System.out.println(equal);
+    }
+}
+
+
+
+
+
+
