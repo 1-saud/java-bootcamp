@@ -1,0 +1,85 @@
+import java.util.Scanner;
+
+public class Day7 {
+
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+
+        // Q1 Smallest Number
+        int num1 = 1;
+        int num2 = 5;
+        int num3 = 3;
+        smallestNum(num1, num2, num3);
+
+        //Q2 negative or positive or zero
+        int num4 = 55;
+        checkNum(num4);
+
+        //Q3
+        System.out.println("Password rules:");
+        System.out.println("1. A password must have at least ten characters.");
+        System.out.println("2. A password consists of only letters and digits.");
+        System.out.println("3. A password must contain at least two digits.");
+
+        System.out.print("\nInput a password (You are agreeing to the above Terms and Conditions.): ");
+        String password = scanner.nextLine();
+
+        if (isValidPassword(password)) {
+            System.out.println("Password is valid: " + password);
+        } else {
+            System.out.println("Password is invalid: " + password);
+        }
+
+    }
+
+    // Q1 Smallest Number
+    static void smallestNum(int num1, int num2, int num3) {
+        if (num1 >= num2 && num1 >= num3) {
+            System.out.println("number 1 is the smallest " +
+                    ":" + num1);
+        } else if (num2 >= num1 && num2 >= num3) {
+            System.out.println("number 2 is the smallest  " +
+                    ":" + num2);
+        } else {
+            System.out.println("number 3 is the smallest " +
+                    ":" + num3);
+        }
+    }
+
+    // Q2 negative or positive or zero num\
+    static void checkNum(int num4) {
+        if (num4 > 0) {
+            System.out.println("the num is positive");
+        } else if (num4 < 0) {
+            System.out.println("the num is negative");
+        } else if (num4 == 0) {
+            System.out.println("number is = to 0");
+        } else {
+            System.out.println("sorry restart the program");
+        }
+
+    }
+
+    //Q3 Password
+    static boolean isValidPassword(String password) {
+        if (password.length() < 10) {
+            return false;
+        }
+
+        int digitCount = 0;
+        for (int i = 0; i < password.length(); i++) {
+            char ch = password.charAt(i);
+
+            if (!Character.isLetterOrDigit(ch)) {
+                return false;
+            }
+
+            if (Character.isDigit(ch)) {
+                digitCount++;
+            }
+        }
+        return true;
+    }
+}
+
