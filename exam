@@ -1,0 +1,86 @@
+import org.w3c.dom.ls.LSOutput;
+
+import java.util.Scanner;
+import java.util.stream.IntStream;
+
+public class exam {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        //Q1
+
+        System.out.println("enter the firest num: ");
+        int num1 = scanner.nextInt();
+        System.out.println("enter the second num: ");
+        int num2 = scanner.nextInt();
+        System.out.println("enter the 3rd num: ");
+        int num3 = scanner.nextInt();
+
+        if (num1 >= num2 && num1 >= num3){
+            System.out.println("the largest number is: " + num1);
+        } else if (num2 >= num1 && num2 >= num3) {
+            System.out.println("the largest number is: " + num2);
+        }else {
+            System.out.println("the largest num is: " + num3);
+
+        }
+
+
+       // Q2
+//       System.out.print("enter your word: ");
+//       String word = scanner.nextLine();
+//       System.out.print("enter index number: ");
+//       int index = scanner.nextInt();
+//
+//       if (index >= 0 && index < word.length()) {
+//            System.out.println("character at index " + index + " is: " + word.charAt(index));
+//        } else {
+//             System.out.println("invalid index!");
+//        }
+
+
+//       Q4
+//        int[] numbers = {10, -21 , 30 , 31, -25};
+//        for (int i = 0; i < numbers.length; i++){
+//            System.out.println(numbers[i]);
+//            if (numbers[i] > 0 ){
+//                System.out.println("the number is positive");
+//            }else if (numbers[i] < 0 ){
+//                System.out.println("the number is negative");
+//            } else {
+//                System.out.println("the number is = to 0 or u entered wrong data ");
+//
+//            }
+//        }
+
+        //Q3
+//        int num;
+//        System.out.println("how many numbers do u want to enter: ");
+//        int numToEnter = scanner.nextInt();
+//        scanner.nextLine();
+//
+//        for (int i = 0; i < numToEnter; i++){
+//        System.out.println("enter a number: ");
+//        num = scanner.nextInt();
+//        int total = num ;
+//      System.out.println("your sum is: " + total);
+//        }
+//    }
+//}
+
+
+       // Q5
+//       if (index >= 0 && index < word.length()) {
+//        String[] words ={"Tuwaiq", "Bootcamp" , "Student" , "Java"};
+//        int lengthArray;
+//       for (int i = 0; i < words.length; i++) {
+//           System.out.println(words[i].length());
+//           int index = words[i].length();
+//       }
+//
+//
+
+       }
+ }
