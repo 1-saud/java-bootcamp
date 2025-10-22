@@ -1,0 +1,475 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Day5 {
+
+    public static void main(String[] args) {
+
+        //  Q1
+      Scanner in = new Scanner(System.in);
+        int n1 = 0;
+        int n2 = 0;
+        boolean ok = false;
+        while (!ok) {
+                try {
+                System.out.print("enter first number: ");
+                     n1 = in.nextInt();
+                System.out.print("enter second number: ");
+                n2 = in.nextInt();
+                ok = true;
+            } catch (InputMismatchException e) {
+                System.out.println("write numbers only pls");
+                in.nextLine();
+            }
+        }
+
+        double mul = n1 * n2;
+        double sub = n1 - n2;
+        double div = 0;
+
+        if (n2 != 0) {
+            div = (double) n1 / n2;
+        } else {
+            System.out.println("cant divide by 0");
+        }
+
+        System.out.println("multiply = " + mul);
+        System.out.println("subtract = " + sub);
+        System.out.println("divide = " + div);
+    }
+}
+
+/*
+        // Q2
+        System.out.println("Enter your number:");
+        Scanner input = new Scanner(System.in);
+
+        try {
+            int number = input.nextInt();
+            for (int i = 1; i <= 10; i++) {
+                System.out.println(number + " x " + i + " = " + (number * i));
+            }
+        }catch (InputMismatchException e){
+            System.out.println(e.getMessage());
+        }
+
+}
+}
+
+
+
+        // Q3
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter radius: ");
+        try {
+            double radius = input.nextDouble();
+            double circleArea = Math.PI * radius * radius;
+            System.out.println("Area of Circle = " + circleArea);
+        }catch (InputMismatchException e){
+            System.out.println("You Must enter a number");
+        }
+    }
+}
+
+        // Q4
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the count of numbers: ");
+        int count = 0;
+        try {
+            count = input.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("u need to enter a num");
+        }
+        int sum = 0;
+        for (int i = 1; i <= count; i++) {
+            try {
+                System.out.print("Enter an integer: ");
+                int num = input.nextInt();
+                sum += num;
+            }catch (InputMismatchException e){
+                System.out.println("the number u enterd is not correct");
+            }
+        }
+
+        double average = (double) sum / count;
+        System.out.println("The average is: " + average);
+        input.close();
+    }
+
+}
+
+        // Q5
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input the first number: ");
+        int num1 = 0;
+        try {
+            num1 = input.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("you must enter a number");
+        }
+
+        System.out.print("Input the second number: ");
+        int num2 = 0;
+        try {
+            num2 = input.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("you must enter a number");
+        }
+        System.out.print("Input the third number: ");
+        int num3 = 0;
+        try {
+            num3 = input.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("you must enter a number");
+        }
+
+        int sum = num1 + num2;
+
+        boolean result = (sum == num3);
+
+        System.out.println("The result is: " + result);
+
+        input.close();
+    }
+}
+
+
+        // Q6
+        Scanner input = new Scanner(System.in);
+
+       String text = "";
+
+        System.out.print("Enter a string: ");
+        try {
+            text = input.nextLine();
+
+            if (text.trim().isEmpty()) {
+                System.out.println("u didn't write anything");
+                input.close();
+                return;
+            }
+
+        } catch (Exception e) {
+            System.out.println("u got an error, please try again.");
+            return;
+        }
+
+        String reversed = "";
+
+        for (int i = text.length() - 1; i >= 0; i--) {
+            reversed += text.charAt(i);
+        }
+        System.out.println("Reversed string: " + reversed);
+        System.out.println("Program finished successfully!");
+    }
+}
+
+        // Q7
+        int number = 0;
+        boolean valid = false;
+        while (!valid) {
+            System.out.print("Enter a number: ");
+            try {
+                number = input.nextInt();
+                valid = true;
+            } catch (InputMismatchException e) {
+                System.out.println("enter a valid number like 1,2,3,4 ....");
+                input.nextLine();
+            }
+        }
+
+        if ((number % 2) == 0) {
+            System.out.println("Your number is even.");
+        } else {
+            System.out.println("Your number is odd.");
+        }
+    }
+}
+}
+
+        // Q8
+        Scanner input = new Scanner(System.in);
+        double celsius = 0.0;
+        boolean valid = false;
+
+        while (!valid) {
+            System.out.print("enter the temperature in Celsius: ");
+            try {
+                celsius = input.nextDouble();
+                valid = true;
+            } catch (InputMismatchException e) {
+                System.out.println("enter a valid number like 37.5 ");
+            }
+        }
+
+        double fahrenheit = (celsius * 1.8) + 32;
+        System.out.println(fahrenheit);
+
+    }
+}
+
+
+        // Q9
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Input a string: ");
+        String text = input.nextLine();
+
+        int index = -1;
+        boolean valid = false;
+
+        while (!valid) {
+            System.out.print("Input a number: ");
+            try {
+                index = input.nextInt();
+                valid = true;
+            } catch (InputMismatchException e) {
+                System.out.println("enter a valid number");
+                input.nextLine();
+            }
+        }
+        if (index >= 0 && index < text.length()) {
+            System.out.println( text.charAt(index));
+        } else {
+            System.out.println("index not correct ");
+        }
+    }
+}
+
+        // Q10
+        Scanner input = new Scanner(System.in);
+        double length = 0.0;
+        double width = 0.0;
+        boolean valid = false;
+        while (!valid) {
+            System.out.print("enter height: ");
+            try {
+                length = input.nextDouble();
+                valid = true;
+            } catch (InputMismatchException e) {
+                System.out.println("enter a valid number");
+                input.nextLine();
+            }
+        }
+        valid = false;
+        while (!valid) {
+            System.out.print("enter width");
+            try {
+                width = input.nextDouble();
+                valid = true;
+            } catch (InputMismatchException e) {
+                System.out.println("enter a valid number");
+                input.nextLine();
+            }
+        }
+        double rectangleArea = length * width;
+        System.out.println(rectangleArea);
+    }
+}
+
+
+
+        //Q11
+        Scanner input = new Scanner(System.in);
+        int firstNumber = 0;
+        int secondNumber = 0;
+        boolean valid = false;
+
+        while (!valid) {
+            System.out.print("First number: ");
+            try {
+                firstNumber = input.nextInt();
+                valid = true;
+            } catch (InputMismatchException e) {
+                System.out.println("enter a valid number!");
+            }
+        }
+
+        valid = false;
+        while (!valid) {
+            System.out.print("Enter Second number: ");
+            try {
+                secondNumber = input.nextInt();
+                valid = true;
+            } catch (InputMismatchException e) {
+                System.out.println("enter a number!");
+                input.nextLine();
+            }
+        }
+        System.out.println("a > b: " + (firstNumber > secondNumber));
+        System.out.println("a < c: " + (firstNumber < secondNumber));
+        System.out.println("a >= d: " + (firstNumber >= secondNumber));
+    }
+}
+
+        //Q12
+     Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
+
+        if (number > 0) {
+            System.out.println("Number is positive");
+        } else if (number < 0) {
+            System.out.println("Number is negative");
+        } else {
+            System.out.println("Number is zero");
+        }
+
+        input.close();
+    }
+}
+
+        //Q13
+        Scanner in = new Scanner(System.in);
+        int a = 0, b = 0, c = 0, d = 0;
+        boolean ok = false;
+
+        while (!ok) {
+            try {
+                System.out.println("enter first num");
+                a = in.nextInt();
+
+                System.out.println("enter second num");
+                b = in.nextInt();
+
+                System.out.println("enter third num");
+                c = in.nextInt();
+
+                System.out.println("enter fourth num");
+                d = in.nextInt();
+
+                ok = true;
+            } catch (InputMismatchException e) {
+                System.out.println("write only numbers pls");
+                in.nextLine(); // clear input
+            }
+        }
+
+        System.out.println("sum = " + (a + b + c + d));
+
+        if (a == b && b == c && c == d) {
+            System.out.println("numbers are equal");
+        } else {
+            System.out.println("numbers are not equal");
+        }
+    }
+}
+
+    //    Q14
+        Scanner in = new Scanner(System.in);
+        int num = 0;
+        boolean ok = false;
+
+        while (!ok) {
+            System.out.print("enter a number: ");
+            try {
+                num = in.nextInt();
+                ok = true;
+            } catch (InputMismatchException e) {
+                System.out.println("just write a number");
+                in.nextLine();
+            }
+        }
+
+        if (num > 0) {
+            System.out.println("number is positive");
+        } else if (num < 0) {
+            System.out.println("number is negative");
+        } else {
+            System.out.println("number is zero");
+        }
+    }
+}
+
+
+     //   Q15
+
+        Scanner in = new Scanner(System.in);
+        int pos = 0;
+        int neg = 0;
+        int zero = 0;
+
+        System.out.println("enter numbers (type -1 to stop):");
+
+        while (true) {
+            try {
+                int num = in.nextInt();
+
+                if (num == -1) {
+                    break;
+                } else if (num > 0) {
+                    pos++;
+                } else if (num < 0) {
+                    neg++;
+                } else {
+                    zero++;
+                }
+
+            } catch (InputMismatchException e) {
+                System.out.println("write numbers only pls");
+                in.nextLine();
+            }
+        }
+
+        System.out.println("positive: " + pos);
+        System.out.println("negative: " + neg);
+        System.out.println("zeros: " + zero);
+    }
+}
+
+
+        /*
+         //Q16
+        Scanner in = new Scanner(System.in);
+        int num = 0;
+        boolean ok = false;
+
+        while (!ok) {
+            System.out.print("enter an integer: ");
+            try {
+                num = in.nextInt();
+                ok = true;
+            } catch (InputMismatchException e) {
+                System.out.println("pls write a number");
+                in.nextLine();
+            }
+        }
+
+        int rev = 0;
+        while (num != 0) {
+            int d = num % 10;
+            rev = rev * 10 + d;
+            num = num / 10;
+        }
+
+        System.out.println("reversed int is: " + rev);
+    }
+}
+
+
+        //Q18
+        Scanner in = new Scanner(System.in);
+        String txt = "";
+
+        System.out.print("enter text: ");
+        try {
+            txt = in.nextLine().toLowerCase();
+        } catch (Exception e) {
+            System.out.println("something went wrong");
+        }
+
+        if (txt.isEmpty()) {
+            System.out.println("you didnt write anything");
+            return;
+        }
+
+        int count = 0;
+        for (int i = 0; i < txt.length(); i++) {
+            if (txt.charAt(i) == 'a') {
+                count++;
+            }
+        }
+        System.out.println("number of a's: " + count);
+    }
+}
+*/
