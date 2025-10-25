@@ -1,0 +1,99 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Game {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        Random r = new Random();
+        char[][] board = new char[3][3];
+     for (int i = 0; i < 3; i++) for (int j = 0; j < 3; j++) board[i][j] = ' ';
+     char turn = 'X';
+        int empty = 9;
+
+      while (true) {
+         draw(board);
+            if (turn == 'X') {
+                try {
+                    playerMove(in, board);
+                  empty = empty - 1;
+                } catch (Exception e) {
+                    System.out.println("في مشكلة: " + e.getMessage());
+                    continue;
+                }
+            } else {
+                System.out.println(" دور الكمبيوتر O");
+                   boolean ok = false;
+                int tries = 0;
+                while (ok == false && tries < 30) {
+                    int i = r.nextInt(3);
+                    int j = r.nextInt(3);
+                    if (board[i][j] == ' ') {
+                        board[i][j] = 'O';
+                        ok = true;
+                        empty = empty - 1;
+                    }
+                    tries = tries + 1;
+                }
+            }
+
+            if (win(board, turn) == true) {
+                draw(board);
+                if (turn == 'X') {
+                    System.out.println("اللاعب فاز ");
+                } else {
+                    System.out.println("الكمبيوتر فاز");
+                }
+                break;
+            }
+
+            if (empty == 0) {
+                draw(board);
+                System.out.println("ما في فائز، تعادل ");
+                break;
+            }
+            if (turn == 'X') {
+                turn = 'O';
+            } else {
+                turn = 'X';
+            }
+        }
+
+        in.close();
+    }
+
+
+    static void playerMove(Scanner in, char[][] b) throws Exception {
+        System.out.print("دورك X — أدخل صف ثم عمود (مثال 1 2 ): ");
+        String[] p = in.nextLine().trim().split(" ");
+        if (p.length != 2) throw new Exception("اكتب رقمين فقط صف ثم عمود.");
+        int i, j;
+        try { i = Integer.parseInt(p[0]); j = Integer.parseInt(p[1]); }
+        catch (NumberFormatException e) { throw new Exception("يجب إدخال أرقام صحيحة."); }
+        if (i < 0 || i > 2 || j < 0 || j > 2) throw new Exception("خارج النطاق (0 إلى 2).");
+        if (b[i][j] != ' ') throw new Exception("الخانة محجوزة اختر غيرها.");
+        b[i][j] = 'X';
+    }
+
+    static boolean win(char[][] g, char p) {
+        for (int i = 0; i < 3; i++) if (g[i][0]==p && g[i][1]==p && g[i][2]==p) return true;
+        for (int j = 0; j < 3; j++) if (g[0][j]==p && g[1][j]==p && g[2][j]==p) return true;
+        if (g[0][0]==p && g[1][1]==p && g[2][2]==p) return true;
+        if (g[0][2]==p && g[1][1]==p && g[2][0]==p) return true;
+        return false;
+    }
+
+    static void draw(char[][] b) {
+        System.out.println("\n   0   1   2");
+        for (int i = 0; i < 3; i++) {
+            System.out.println("  --- --- ---");
+            System.out.print(i + " ");
+            for (int j = 0; j < 3; j++) System.out.print("| " + b[i][j] + " ");
+            System.out.println("|");
+        }
+    }
+}
+
+
+
+
+
